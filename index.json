@@ -1,5 +1,59 @@
 {
   "version": 1,
-  "plugins": [],
+  "plugins": [
+    {
+      "id": "xcp-ng",
+      "name": "XCP-ng",
+      "description": "VMs, snapshots and app disks on an XCP-ng host, through a forced-command agent in dom0 (no root password).",
+      "author": "homeforge-tech",
+      "repo": "https://github.com/homeforge-tech/homeforge-plugins",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "image": "ghcr.io/homeforge-tech/homeforge-xcp-ng@sha256:192278f39ef62583b16079032ec5e94044f29a73d26155cd01937ac917eba34a",
+          "api": "v1alpha1",
+          "provides": [
+            "hypervisor",
+            "snapshots",
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opnsense",
+      "name": "OPNsense",
+      "description": "Opens the ports publications need on an OPNsense firewall, through three aliases its rule uses.",
+      "author": "homeforge-tech",
+      "repo": "https://github.com/homeforge-tech/homeforge-plugins",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "image": "ghcr.io/homeforge-tech/homeforge-opnsense@sha256:23e0dc7e9da78c0b76e09ea4db9aeb076d6d079c434a995e0509e804ea7aada9",
+          "api": "v1alpha1",
+          "provides": [
+            "firewall"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vps-edge",
+      "name": "Cloud edge (WireGuard)",
+      "description": "Publishes routes and ports on a cloud VM that forwards them to the house through a WireGuard tunnel (sites keep the visitor's address).",
+      "author": "homeforge-tech",
+      "repo": "https://github.com/homeforge-tech/homeforge-plugins",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "image": "ghcr.io/homeforge-tech/homeforge-vps-edge@sha256:c8e432fcc53c7826799e5f2fdfbfa999f0c8b1b2dae4ade461110b02dd9f02b1",
+          "api": "v1alpha1",
+          "provides": [
+            "exposure"
+          ]
+        }
+      ]
+    }
+  ],
   "templates": []
 }
