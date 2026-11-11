@@ -1,5 +1,89 @@
 {
   "version": 1,
-  "plugins": [],
+  "plugins": [
+    {
+      "id": "xcp-ng",
+      "name": "XCP-ng",
+      "description": "VMs, snapshots and app disks on an XCP-ng host, through a forced-command agent in dom0 that its Set up page installs (the root password is never kept).",
+      "author": "homeforge-tech",
+      "repo": "https://github.com/homeforge-tech/homeforge-plugins",
+      "official": true,
+      "versions": [
+        {
+          "version": "0.2.0",
+          "packages": {
+            "amd64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-0.2.0/xcp-ng-0.2.0-amd64.tar.gz",
+              "sha256": "ebd2741f3c42676911e601a5a3fe8dce9283affa34711ef2b57f895f6cedf947"
+            },
+            "arm64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-0.2.0/xcp-ng-0.2.0-arm64.tar.gz",
+              "sha256": "d61cec658b2b5cfc83d12d3fa238af7f7b8103c36973d74614098138cc140ac3"
+            }
+          },
+          "api": "v1alpha1",
+          "provides": [
+            "hypervisor",
+            "snapshots",
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opnsense",
+      "name": "OPNsense",
+      "description": "Opens the ports publications need on an OPNsense firewall, through three aliases its rule uses. Its page sets the firewall up.",
+      "author": "homeforge-tech",
+      "repo": "https://github.com/homeforge-tech/homeforge-plugins",
+      "official": true,
+      "versions": [
+        {
+          "version": "0.2.0",
+          "packages": {
+            "amd64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-0.2.0/opnsense-0.2.0-amd64.tar.gz",
+              "sha256": "9580e7f73fe77f8e4cf8af5f9a3326e74c4ef01cf70718dba81ced311bc30486"
+            },
+            "arm64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-0.2.0/opnsense-0.2.0-arm64.tar.gz",
+              "sha256": "e6829b756e87235d1fdef83dd3c092bce9c2cc1e11a0116a96f94cad3c5413aa"
+            }
+          },
+          "api": "v1alpha1",
+          "provides": [
+            "firewall"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vps-edge",
+      "name": "VPS edge",
+      "description": "Publishes routes and ports on a VPS (any Linux machine with a public address) that forwards them to the house through a tunnel; sites keep the visitor's address. Its page sets the VPS up.",
+      "author": "homeforge-tech",
+      "repo": "https://github.com/homeforge-tech/homeforge-plugins",
+      "official": true,
+      "versions": [
+        {
+          "version": "0.2.0",
+          "packages": {
+            "amd64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-0.2.0/vps-edge-0.2.0-amd64.tar.gz",
+              "sha256": "d6fb6f616c3950dd68912284e5bcdbb2ac715e369059c0034b752d150efdd5de"
+            },
+            "arm64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-0.2.0/vps-edge-0.2.0-arm64.tar.gz",
+              "sha256": "82710d17cac94a0bc11ed6de96f33df639adecf562d5da7e2f077383076a75d3"
+            }
+          },
+          "api": "v1alpha1",
+          "provides": [
+            "exposure"
+          ]
+        }
+      ]
+    }
+  ],
   "templates": []
 }
