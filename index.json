@@ -81,6 +81,23 @@
           "provides": [
             "exposure"
           ]
+        },
+        {
+          "version": "0.2.1",
+          "packages": {
+            "amd64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-0.2.1/vps-edge-0.2.1-amd64.tar.gz",
+              "sha256": "0676f8f6b3e9fe1db13a25cf4129136136ca4ad0c5339b873c149068b7102e26"
+            },
+            "arm64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-0.2.1/vps-edge-0.2.1-arm64.tar.gz",
+              "sha256": "d169800f0e3bbbdf1ab47cad39cad500c7b931df8ca868a1b9b0dcbd57de5ba7"
+            }
+          },
+          "api": "v1alpha1",
+          "provides": [
+            "exposure"
+          ]
         }
       ]
     }
