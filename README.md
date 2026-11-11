@@ -1,7 +1,7 @@
 # homeforge-index
 
-The official plugin index of [homeforge](https://github.com/s0beran0/homeforge): every core reads
-`https://raw.githubusercontent.com/s0beran0/homeforge-index/main/index.json` by default, and its entries show as
+The official plugin index of [homeforge](https://github.com/homeforge-tech/homeforge): every core reads
+`https://raw.githubusercontent.com/homeforge-tech/homeforge-index/main/index.json` by default, and its entries show as
 "official" in the store. Changes come by pull request.
 
 ## Format
@@ -16,13 +16,13 @@ The official plugin index of [homeforge](https://github.com/s0beran0/homeforge):
       "id": "xcp-ng",
       "name": "XCP-ng",
       "description": "VMs, snapshots and app disks on an XCP-ng host.",
-      "author": "s0beran0",
-      "repo": "https://github.com/s0beran0/homeforge-plugins",
+      "author": "homeforge-tech",
+      "repo": "https://github.com/homeforge-tech/homeforge-plugins",
       "icon": "https://… (https only, optional)",
       "versions": [
         {
           "version": "0.1.0",
-          "image": "ghcr.io/s0beran0/homeforge-xcp-ng@sha256:<64 hex>",
+          "image": "ghcr.io/homeforge-tech/homeforge-xcp-ng@sha256:<64 hex>",
           "api": "v1alpha1",
           "provides": ["hypervisor", "snapshots", "storage"],
           "permissions": [{"scope": "apps:read"}]
