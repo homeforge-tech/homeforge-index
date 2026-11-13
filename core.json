@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "serial": 1,
+  "serial": 2,
   "releases": [
     {
       "version": "0.3.0",
@@ -22,6 +22,29 @@
         "deb-arm64": {
           "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.3.0/homeforge_0.3.0-1_arm64.deb",
           "sha256": "96a05f711db98781bba04a16467fccfc897effc84f48bbaf716bf611d16d7479"
+        }
+      }
+    },
+    {
+      "version": "0.3.1",
+      "date": "2026-11-13",
+      "notes": "Fix: the Updates page broke when no newer release was offered.",
+      "packages": {
+        "rpm-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.3.1/homeforge-0.3.1-1.aarch64.rpm",
+          "sha256": "722abf1060387da65159a1d030bd7477dca08d653a9005a01e36c1a82c5dd221"
+        },
+        "rpm-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.3.1/homeforge-0.3.1-1.x86_64.rpm",
+          "sha256": "ad302e6a85a220a98e2ab0d044a1564508e047bbc367f090ec71020850e68d42"
+        },
+        "deb-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.3.1/homeforge_0.3.1-1_amd64.deb",
+          "sha256": "92c70a6b72ce533d33bdab9c1927d856e027f95b710dd99b5bccec501c426061"
+        },
+        "deb-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.3.1/homeforge_0.3.1-1_arm64.deb",
+          "sha256": "0dac340df4ed71103eec3b067cebde024b46748bb44e5a3c4717ea694af29b19"
         }
       }
     }
