@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "serial": 5,
+  "serial": 6,
   "releases": [
     {
       "version": "0.3.0",
@@ -114,6 +114,29 @@
         "deb-arm64": {
           "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.0/homeforge_0.6.0-1_arm64.deb",
           "sha256": "2e6ed3641d66bf58c904fc3d008a843bb4cc61faa48de1bd011adc6501eb896b"
+        }
+      }
+    },
+    {
+      "version": "0.6.1",
+      "date": "2026-11-13",
+      "notes": "New logo (a house over an anvil) in the menu, sign-in and setup; favicon, app icons and a web app manifest for wall screens.",
+      "packages": {
+        "rpm-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.1/homeforge-0.6.1-1.aarch64.rpm",
+          "sha256": "f5ef739bcd2e3cb8df9f554a259f617f1d38102166ae554ddb991b6a26c51308"
+        },
+        "rpm-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.1/homeforge-0.6.1-1.x86_64.rpm",
+          "sha256": "8032536a9e567362d7c3c7f8f7257f834f80718481b4467b1c0b9a762bce1a52"
+        },
+        "deb-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.1/homeforge_0.6.1-1_amd64.deb",
+          "sha256": "e748c342389084b9dbb6ff6fbfafc73f3fd7edb27c566ab9a9d9bb13ec487830"
+        },
+        "deb-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.1/homeforge_0.6.1-1_arm64.deb",
+          "sha256": "389d09e689d23d7c40a1ddb0436abdd9036de142ecf05169c7d43d9865c9e08b"
         }
       }
     }
