@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "serial": 6,
+  "serial": 7,
   "releases": [
     {
       "version": "0.3.0",
@@ -137,6 +137,29 @@
         "deb-arm64": {
           "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.1/homeforge_0.6.1-1_arm64.deb",
           "sha256": "389d09e689d23d7c40a1ddb0436abdd9036de142ecf05169c7d43d9865c9e08b"
+        }
+      }
+    },
+    {
+      "version": "0.6.2",
+      "date": "2026-11-13",
+      "notes": "Home screen editor: widgets shown for real while arranging, a widget catalog, plain settings and a grid size per home screen (4 to 24 columns, row height); home screens listed with a miniature of their layout; the side menu can shrink to its icons.",
+      "packages": {
+        "rpm-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.2/homeforge-0.6.2-1.aarch64.rpm",
+          "sha256": "3551f67dfd1438455f6b368136d776d000ea3169d6f9e491c65ff0cf7f6b7150"
+        },
+        "rpm-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.2/homeforge-0.6.2-1.x86_64.rpm",
+          "sha256": "c943a513e4f359658b49fe88d945771e039aee9bc6c10baec41bb39b583319d7"
+        },
+        "deb-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.2/homeforge_0.6.2-1_amd64.deb",
+          "sha256": "5f689ce6ff02f5c9bc56fa48a8031ef4b7028b9391a654162b0b089704449067"
+        },
+        "deb-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.2/homeforge_0.6.2-1_arm64.deb",
+          "sha256": "d1ddc24ae0a226472718a23bda424b47bcef29eba77dfacc30c5acfa45864aa3"
         }
       }
     }
