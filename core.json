@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "serial": 3,
+  "serial": 4,
   "releases": [
     {
       "version": "0.3.0",
@@ -68,6 +68,29 @@
         "deb-arm64": {
           "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.4.0/homeforge_0.4.0-1_arm64.deb",
           "sha256": "fd37e79ea69571a9c495f4435d7f348b50e016b31ad1fb48e39dee4caa8c608b"
+        }
+      }
+    },
+    {
+      "version": "0.5.0",
+      "date": "2026-11-13",
+      "notes": "Store with Apps (a catalog of Docker apps by category) and Plugins on their own shelves; built-in container logs and terminals (the Dozzle installer is gone); apps register from running containers, VMs or addresses.",
+      "packages": {
+        "rpm-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.5.0/homeforge-0.5.0-1.aarch64.rpm",
+          "sha256": "4b1e7a30a5b7e4aaab4d90e0ff8dbcd0ddf6376d404a56912ddc6854d98eaee0"
+        },
+        "rpm-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.5.0/homeforge-0.5.0-1.x86_64.rpm",
+          "sha256": "1841d0854de5d51ddb83fb50c1d725734648690641d95a1142c54e9482ea67ad"
+        },
+        "deb-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.5.0/homeforge_0.5.0-1_amd64.deb",
+          "sha256": "816e8547cf4a763612fefd053982ea7102b4dc2210abc1370934f480d315c8e8"
+        },
+        "deb-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.5.0/homeforge_0.5.0-1_arm64.deb",
+          "sha256": "45c4b2bb13824dab143f3192e3fe244c41f2657c06b9d68c4a1b55165f922761"
         }
       }
     }
