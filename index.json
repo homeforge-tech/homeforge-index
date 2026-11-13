@@ -4,7 +4,7 @@
     {
       "id": "xcp-ng",
       "name": "XCP-ng",
-      "description": "VMs, snapshots and app disks on an XCP-ng host, through a forced-command agent in dom0 that its Set up page installs (the root password is never kept).",
+      "description": "VMs, snapshots and app disks on an XCP-ng host, through its management API (XAPI) as Xen Orchestra does: you sign in on its Set up page, nothing is installed on the host.",
       "author": "homeforge-tech",
       "repo": "https://github.com/homeforge-tech/homeforge-plugins",
       "official": true,
@@ -19,6 +19,25 @@
             "arm64": {
               "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-0.2.0/xcp-ng-0.2.0-arm64.tar.gz",
               "sha256": "d61cec658b2b5cfc83d12d3fa238af7f7b8103c36973d74614098138cc140ac3"
+            }
+          },
+          "api": "v1alpha1",
+          "provides": [
+            "hypervisor",
+            "snapshots",
+            "storage"
+          ]
+        },
+        {
+          "version": "0.3.0",
+          "packages": {
+            "amd64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-xcp-ng-0.3.0/xcp-ng-0.3.0-amd64.tar.gz",
+              "sha256": "943db7189a3063a13a952c8d62d6f111da38c2a42f09d826e7c8afe83436ae26"
+            },
+            "arm64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-xcp-ng-0.3.0/xcp-ng-0.3.0-arm64.tar.gz",
+              "sha256": "44d099e62f83ba7644791d2205a1fc33b2f90ac2630638424efc89cef53c3117"
             }
           },
           "api": "v1alpha1",
@@ -210,7 +229,7 @@
     {
       "id": "calibre-web",
       "title": "Calibre-Web",
-      "description": "Browse, read and send the e-books of a Calibre library. First sign-in: admin / admin123 \u2014 change it at once.",
+      "description": "Browse, read and send the e-books of a Calibre library. First sign-in: admin / admin123 — change it at once.",
       "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/calibre-web.svg",
       "image": "lscr.io/linuxserver/calibre-web:0.6.27-ls409",
       "web_port": 8083,
