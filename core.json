@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "serial": 2,
+  "serial": 3,
   "releases": [
     {
       "version": "0.3.0",
@@ -45,6 +45,29 @@
         "deb-arm64": {
           "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.3.1/homeforge_0.3.1-1_arm64.deb",
           "sha256": "0dac340df4ed71103eec3b067cebde024b46748bb44e5a3c4717ea694af29b19"
+        }
+      }
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-11-13",
+      "notes": "Apps lists everything; register a running container, a service in a VM or any address as an app (state, start/stop, an address on your domain) without recreating it.",
+      "packages": {
+        "rpm-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.4.0/homeforge-0.4.0-1.aarch64.rpm",
+          "sha256": "472c2dc68bd83f4aee19a2896d4072ca1782d7e83d08e73f4fb2976fc72bb482"
+        },
+        "rpm-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.4.0/homeforge-0.4.0-1.x86_64.rpm",
+          "sha256": "7a5669371b800cb0c97acd29d1e88752ddf9b04f8e4fb81f51ed9c0c066046e6"
+        },
+        "deb-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.4.0/homeforge_0.4.0-1_amd64.deb",
+          "sha256": "8ef9605e5703dc602d9f8f3b3560a0a8b3428dc5f457ef98162fcbc00381fbf7"
+        },
+        "deb-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.4.0/homeforge_0.4.0-1_arm64.deb",
+          "sha256": "fd37e79ea69571a9c495f4435d7f348b50e016b31ad1fb48e39dee4caa8c608b"
         }
       }
     }
