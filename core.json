@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "serial": 1,
+  "releases": [
+    {
+      "version": "0.3.0",
+      "date": "2026-11-13",
+      "notes": "Grouped side menu you arrange, three themes, a starting dashboard; core updates from the panel (signed releases, automatic rollback, optional automatic window); time zone, locale and clock settings.",
+      "packages": {
+        "rpm-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.3.0/homeforge-0.3.0-1.aarch64.rpm",
+          "sha256": "53bad84ab9885139f498e895943c9e82c35cde18ae8d420aac6338f87560f695"
+        },
+        "rpm-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.3.0/homeforge-0.3.0-1.x86_64.rpm",
+          "sha256": "3d36adfd91d59539dc687f69a24c76504deff20096f992acadb8e03f353742db"
+        },
+        "deb-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.3.0/homeforge_0.3.0-1_amd64.deb",
+          "sha256": "acbdceefa0c51474bcefd4349159ec125ec8574bdaf44e5e753f6e7268a5acbb"
+        },
+        "deb-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.3.0/homeforge_0.3.0-1_arm64.deb",
+          "sha256": "96a05f711db98781bba04a16467fccfc897effc84f48bbaf716bf611d16d7479"
+        }
+      }
+    }
+  ]
+}
