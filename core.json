@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "serial": 4,
+  "serial": 5,
   "releases": [
     {
       "version": "0.3.0",
@@ -91,6 +91,29 @@
         "deb-arm64": {
           "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.5.0/homeforge_0.5.0-1_arm64.deb",
           "sha256": "45c4b2bb13824dab143f3192e3fe244c41f2657c06b9d68c4a1b55165f922761"
+        }
+      }
+    },
+    {
+      "version": "0.6.0",
+      "date": "2026-11-13",
+      "notes": "Clearer interface: the menu is grouped by task (Apps, Home screen, Network, System, Security) with plain names; the Gallery is part of Apps (an On Home switch per app) and its old links become apps; new Wall screens page; API keys described in words; web addresses, ports and the domain page list what exists first; certificate states (valid, expired, untrusted, not issued); accessibility pass.",
+      "packages": {
+        "rpm-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.0/homeforge-0.6.0-1.aarch64.rpm",
+          "sha256": "f6fb398c1d0fb69787389490f193bac32d2ee2ea6c10945215d9fbc51130002d"
+        },
+        "rpm-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.0/homeforge-0.6.0-1.x86_64.rpm",
+          "sha256": "faf020bcefb212d9ab004bef4b065ba010314a13fbb8388af73d231a13e793ef"
+        },
+        "deb-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.0/homeforge_0.6.0-1_amd64.deb",
+          "sha256": "bece92f6800db90995b3af5d76815374d3a3c846c0703e59ce256f16c6b06fc4"
+        },
+        "deb-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.0/homeforge_0.6.0-1_arm64.deb",
+          "sha256": "2e6ed3641d66bf58c904fc3d008a843bb4cc61faa48de1bd011adc6501eb896b"
         }
       }
     }
