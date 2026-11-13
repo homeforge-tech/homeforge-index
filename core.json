@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "serial": 7,
+  "serial": 8,
   "releases": [
     {
       "version": "0.3.0",
@@ -160,6 +160,29 @@
         "deb-arm64": {
           "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.2/homeforge_0.6.2-1_arm64.deb",
           "sha256": "d1ddc24ae0a226472718a23bda424b47bcef29eba77dfacc30c5acfa45864aa3"
+        }
+      }
+    },
+    {
+      "version": "0.6.3",
+      "date": "2026-11-13",
+      "notes": "One window per app everywhere (open, start/stop/restart, logs and terminal inside, Home, edit, remove); the panel's own themed dialogs instead of the browser's; plugins add tabs to an app's window (a VM's console with xcp-ng 0.4.0); make your own widgets from the panel, a plugin or any http(s) address; build your own app from a Dockerfile or a compose file (needs the new homeforge-agent on the Docker host).",
+      "packages": {
+        "rpm-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.3/homeforge-0.6.3-1.aarch64.rpm",
+          "sha256": "73cf30cc2602ea392bc3fee814fe591329e7faf6bcf848b8e0a649311c78f0e0"
+        },
+        "rpm-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.3/homeforge-0.6.3-1.x86_64.rpm",
+          "sha256": "0fec7712ab665ba1e0c23999276bac1c3213a0a67558bcd355b4777606ca7e57"
+        },
+        "deb-amd64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.3/homeforge_0.6.3-1_amd64.deb",
+          "sha256": "86d081f4c33e2392638abfb1c7396f46a71375d4db2f4cf4edc9400743ee81f2"
+        },
+        "deb-arm64": {
+          "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/core-0.6.3/homeforge_0.6.3-1_arm64.deb",
+          "sha256": "c814af2a25ae5d1de5fd0a2ed32f91d54b5853feee02c2752a02a51fd744cc58"
         }
       }
     }
