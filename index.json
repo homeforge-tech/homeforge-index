@@ -65,6 +65,25 @@
             "snapshots",
             "storage"
           ]
+        },
+        {
+          "version": "0.4.0",
+          "packages": {
+            "amd64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-xcp-ng-0.4.0/xcp-ng-0.4.0-amd64.tar.gz",
+              "sha256": "f32e8b098dc45d80688a260321e910cedc5a64818320544d45fdc095bb775e75"
+            },
+            "arm64": {
+              "url": "https://github.com/homeforge-tech/homeforge-index/releases/download/plugins-xcp-ng-0.4.0/xcp-ng-0.4.0-arm64.tar.gz",
+              "sha256": "e849d2ac77b3da2525f9fae413ce510b37bb0bd91c201202e82adc0b6a740aac"
+            }
+          },
+          "api": "v1alpha1",
+          "provides": [
+            "hypervisor",
+            "snapshots",
+            "storage"
+          ]
         }
       ]
     },
