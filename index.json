@@ -102,5 +102,639 @@
       ]
     }
   ],
-  "templates": []
+  "templates": [
+    {
+      "id": "jellyfin",
+      "title": "Jellyfin",
+      "description": "Your movies, shows and music, streamed to every screen in the house. Put your media in the media folder.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jellyfin.svg",
+      "image": "jellyfin/jellyfin:12.4",
+      "web_port": 8096,
+      "category": "media",
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        },
+        {
+          "container": "/cache",
+          "folder": "cache"
+        },
+        {
+          "container": "/media",
+          "folder": "media"
+        }
+      ],
+      "disk_gb": 20
+    },
+    {
+      "id": "navidrome",
+      "title": "Navidrome",
+      "description": "A music server and streamer for your own collection, with Subsonic apps on the phone.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/navidrome.svg",
+      "image": "deluan/navidrome:0.64.2",
+      "web_port": 4533,
+      "category": "media",
+      "volumes": [
+        {
+          "container": "/data",
+          "folder": "data"
+        },
+        {
+          "container": "/music",
+          "folder": "music"
+        }
+      ]
+    },
+    {
+      "id": "audiobookshelf",
+      "title": "Audiobookshelf",
+      "description": "Audiobooks and podcasts, with progress kept across devices.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/audiobookshelf.svg",
+      "image": "ghcr.io/advplyr/audiobookshelf:2.37.2",
+      "web_port": 80,
+      "category": "media",
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        },
+        {
+          "container": "/metadata",
+          "folder": "metadata"
+        },
+        {
+          "container": "/audiobooks",
+          "folder": "audiobooks"
+        },
+        {
+          "container": "/podcasts",
+          "folder": "podcasts"
+        }
+      ]
+    },
+    {
+      "id": "jellyseerr",
+      "title": "Jellyseerr",
+      "description": "Lets the house ask for movies and shows; works with Jellyfin, Sonarr and Radarr.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jellyseerr.svg",
+      "image": "ghcr.io/fallenbagel/jellyseerr:2.7.3",
+      "web_port": 5055,
+      "category": "media",
+      "volumes": [
+        {
+          "container": "/app/config",
+          "folder": "config"
+        }
+      ]
+    },
+    {
+      "id": "kavita",
+      "title": "Kavita",
+      "description": "A reader for comics, manga and books, in the browser.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/kavita.svg",
+      "image": "jvmilazz0/kavita:0.9.1",
+      "web_port": 5000,
+      "category": "media",
+      "volumes": [
+        {
+          "container": "/kavita/config",
+          "folder": "config"
+        },
+        {
+          "container": "/library",
+          "folder": "library"
+        }
+      ]
+    },
+    {
+      "id": "calibre-web",
+      "title": "Calibre-Web",
+      "description": "Browse, read and send the e-books of a Calibre library. First sign-in: admin / admin123 \u2014 change it at once.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/calibre-web.svg",
+      "image": "lscr.io/linuxserver/calibre-web:0.6.27-ls409",
+      "web_port": 8083,
+      "category": "media",
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        },
+        {
+          "container": "/books",
+          "folder": "books"
+        }
+      ],
+      "env": [
+        {
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        }
+      ],
+      "uid": 1000,
+      "gid": 1000
+    },
+    {
+      "id": "qbittorrent",
+      "title": "qBittorrent",
+      "description": "A torrent client with a web interface. Its first password is in its logs. Incoming peers need its torrent port published in Ports.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/qbittorrent.svg",
+      "image": "lscr.io/linuxserver/qbittorrent:5.3.0_v2.1.2-ls487",
+      "web_port": 8080,
+      "category": "downloads",
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        },
+        {
+          "container": "/downloads",
+          "folder": "downloads"
+        }
+      ],
+      "env": [
+        {
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        },
+        {
+          "key": "WEBUI_PORT",
+          "value": "8080"
+        }
+      ],
+      "uid": 1000,
+      "gid": 1000
+    },
+    {
+      "id": "sonarr",
+      "title": "Sonarr",
+      "description": "Follows your TV shows and fetches new episodes. Its folders are its own: to share downloads and libraries with the other apps, point them all at the same network share.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/sonarr.svg",
+      "image": "lscr.io/linuxserver/sonarr:4.0.20.3014-ls4",
+      "web_port": 8989,
+      "category": "downloads",
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        },
+        {
+          "container": "/tv",
+          "folder": "tv"
+        },
+        {
+          "container": "/downloads",
+          "folder": "downloads"
+        }
+      ],
+      "env": [
+        {
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        }
+      ],
+      "uid": 1000,
+      "gid": 1000
+    },
+    {
+      "id": "radarr",
+      "title": "Radarr",
+      "description": "Follows the movies you want and fetches them. Its folders are its own: to share downloads and libraries with the other apps, point them all at the same network share.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/radarr.svg",
+      "image": "lscr.io/linuxserver/radarr:6.4.4.10685-ls326",
+      "web_port": 7878,
+      "category": "downloads",
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        },
+        {
+          "container": "/movies",
+          "folder": "movies"
+        },
+        {
+          "container": "/downloads",
+          "folder": "downloads"
+        }
+      ],
+      "env": [
+        {
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        }
+      ],
+      "uid": 1000,
+      "gid": 1000
+    },
+    {
+      "id": "prowlarr",
+      "title": "Prowlarr",
+      "description": "One place for the indexers Sonarr and Radarr search.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/prowlarr.svg",
+      "image": "lscr.io/linuxserver/prowlarr:2.7.0.5723-ls168",
+      "web_port": 9696,
+      "category": "downloads",
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        }
+      ],
+      "env": [
+        {
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        }
+      ],
+      "uid": 1000,
+      "gid": 1000
+    },
+    {
+      "id": "bazarr",
+      "title": "Bazarr",
+      "description": "Finds subtitles for your movies and shows. Its folders are its own: to share downloads and libraries with the other apps, point them all at the same network share.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/bazarr.svg",
+      "image": "lscr.io/linuxserver/bazarr:v1.6.2-ls372",
+      "web_port": 6767,
+      "category": "downloads",
+      "require_login": true,
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        },
+        {
+          "container": "/movies",
+          "folder": "movies"
+        },
+        {
+          "container": "/tv",
+          "folder": "tv"
+        }
+      ],
+      "env": [
+        {
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        }
+      ],
+      "uid": 1000,
+      "gid": 1000
+    },
+    {
+      "id": "nextcloud",
+      "title": "Nextcloud",
+      "description": "Files, calendar and contacts in your own cloud (with its built-in database; for many users, add MariaDB).",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nextcloud.svg",
+      "image": "nextcloud:35.0.2",
+      "web_port": 80,
+      "category": "files",
+      "volumes": [
+        {
+          "container": "/var/www/html",
+          "folder": "html"
+        }
+      ],
+      "env": [
+        {
+          "key": "OVERWRITEPROTOCOL",
+          "value": "https"
+        }
+      ],
+      "disk_gb": 20
+    },
+    {
+      "id": "filebrowser",
+      "title": "File Browser",
+      "description": "Manage the files in its files folder from the browser. Its first password is in its logs.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/filebrowser.svg",
+      "image": "filebrowser/filebrowser:v2.63.23",
+      "web_port": 80,
+      "category": "files",
+      "volumes": [
+        {
+          "container": "/srv",
+          "folder": "files"
+        },
+        {
+          "container": "/database",
+          "folder": "database"
+        },
+        {
+          "container": "/config",
+          "folder": "config"
+        }
+      ],
+      "uid": 1000,
+      "gid": 1000
+    },
+    {
+      "id": "syncthing",
+      "title": "Syncthing",
+      "description": "Keeps folders in sync between your devices. Direct syncing needs its port 22000 published in Ports (otherwise it goes through relays).",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/syncthing.svg",
+      "image": "lscr.io/linuxserver/syncthing:v2.1.7-ls236",
+      "web_port": 8384,
+      "category": "files",
+      "require_login": true,
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        },
+        {
+          "container": "/data",
+          "folder": "data"
+        }
+      ],
+      "env": [
+        {
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        }
+      ],
+      "uid": 1000,
+      "gid": 1000
+    },
+    {
+      "id": "memos",
+      "title": "Memos",
+      "description": "Quick notes and memos, private and searchable.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/memos.svg",
+      "image": "neosmemo/memos:26.11.0",
+      "web_port": 5230,
+      "category": "productivity",
+      "volumes": [
+        {
+          "container": "/var/opt/memos",
+          "folder": "data"
+        }
+      ]
+    },
+    {
+      "id": "mealie",
+      "title": "Mealie",
+      "description": "Recipes, meal plans and shopping lists for the family.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/mealie.svg",
+      "image": "ghcr.io/mealie-recipes/mealie:v3.31.0",
+      "web_port": 9000,
+      "category": "productivity",
+      "volumes": [
+        {
+          "container": "/app/data",
+          "folder": "data"
+        }
+      ]
+    },
+    {
+      "id": "actual",
+      "title": "Actual Budget",
+      "description": "Personal budgeting that stays on your server.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/actual-budget.svg",
+      "image": "actualbudget/actual-server:26.11.0",
+      "web_port": 5006,
+      "category": "productivity",
+      "volumes": [
+        {
+          "container": "/data",
+          "folder": "data"
+        }
+      ]
+    },
+    {
+      "id": "stirling-pdf",
+      "title": "Stirling-PDF",
+      "description": "Merge, split, convert, sign and OCR PDF files, privately.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/stirling-pdf.svg",
+      "image": "stirlingtools/stirling-pdf:3.3.0",
+      "web_port": 8080,
+      "category": "productivity",
+      "volumes": [
+        {
+          "container": "/configs",
+          "folder": "configs"
+        }
+      ],
+      "uid": 1000,
+      "gid": 1000
+    },
+    {
+      "id": "it-tools",
+      "title": "IT-Tools",
+      "description": "Dozens of small tools for developers and admins (encoders, generators, converters).",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/it-tools.svg",
+      "image": "corentinth/it-tools:2024.10.22-7ca5933",
+      "web_port": 80,
+      "category": "productivity"
+    },
+    {
+      "id": "freshrss",
+      "title": "FreshRSS",
+      "description": "An RSS reader for the news and blogs you follow.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/freshrss.svg",
+      "image": "freshrss/freshrss:1.30.4",
+      "web_port": 80,
+      "category": "productivity",
+      "volumes": [
+        {
+          "container": "/var/www/FreshRSS/data",
+          "folder": "data"
+        },
+        {
+          "container": "/var/www/FreshRSS/extensions",
+          "folder": "extensions"
+        }
+      ],
+      "env": [
+        {
+          "key": "CRON_MIN",
+          "value": "1,31"
+        }
+      ]
+    },
+    {
+      "id": "vaultwarden",
+      "title": "Vaultwarden",
+      "description": "A password manager that works with the Bitwarden apps. Once your account exists, set SIGNUPS_ALLOWED to false; add DOMAIN (its https address) for passkeys and attachments.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/vaultwarden.svg",
+      "image": "vaultwarden/server:1.37.5",
+      "web_port": 80,
+      "category": "security",
+      "volumes": [
+        {
+          "container": "/data",
+          "folder": "data"
+        }
+      ],
+      "env": [
+        {
+          "key": "SIGNUPS_ALLOWED",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "id": "gitea",
+      "title": "Gitea",
+      "description": "Git hosting for your own projects, with issues and pull requests (clones over HTTPS; SSH needs its port 22 published in Ports).",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/gitea.svg",
+      "image": "gitea/gitea:28.3.0",
+      "web_port": 3000,
+      "category": "development",
+      "volumes": [
+        {
+          "container": "/data",
+          "folder": "data"
+        }
+      ],
+      "env": [
+        {
+          "key": "USER_UID",
+          "value": "1000"
+        },
+        {
+          "key": "USER_GID",
+          "value": "1000"
+        }
+      ]
+    },
+    {
+      "id": "code-server",
+      "title": "code-server",
+      "description": "VS Code in the browser, on your server. Set its password here.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/vscode.svg",
+      "image": "lscr.io/linuxserver/code-server:4.145.2-ls376",
+      "web_port": 8443,
+      "category": "development",
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        }
+      ],
+      "env": [
+        {
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        },
+        {
+          "key": "PASSWORD",
+          "secret": true
+        }
+      ]
+    },
+    {
+      "id": "uptime-kuma",
+      "title": "Uptime Kuma",
+      "description": "Watches your sites and services and tells you when one goes down.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/uptime-kuma.svg",
+      "image": "louislam/uptime-kuma:2.5.11",
+      "web_port": 3001,
+      "category": "monitoring",
+      "volumes": [
+        {
+          "container": "/app/data",
+          "folder": "data"
+        }
+      ]
+    },
+    {
+      "id": "librespeed",
+      "title": "LibreSpeed",
+      "description": "A speed test for your network, without ads.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/librespeed.svg",
+      "image": "lscr.io/linuxserver/librespeed:v6.3.1-ls300",
+      "web_port": 80,
+      "category": "monitoring",
+      "volumes": [
+        {
+          "container": "/config",
+          "folder": "config"
+        }
+      ],
+      "env": [
+        {
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        }
+      ]
+    },
+    {
+      "id": "grafana",
+      "title": "Grafana",
+      "description": "Dashboards and charts for your metrics and logs. Choose the admin password here.",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/grafana.svg",
+      "image": "grafana/grafana:13.3.1",
+      "web_port": 3000,
+      "category": "monitoring",
+      "volumes": [
+        {
+          "container": "/var/lib/grafana",
+          "folder": "data"
+        }
+      ],
+      "env": [
+        {
+          "key": "GF_SECURITY_ADMIN_PASSWORD",
+          "secret": true
+        }
+      ],
+      "uid": 472
+    },
+    {
+      "id": "node-red",
+      "title": "Node-RED",
+      "description": "Wire devices, APIs and services together with flows; pairs well with Home Assistant. Behind the panel's login (its editor can run commands).",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/node-red.svg",
+      "image": "nodered/node-red:5.0.9",
+      "web_port": 1880,
+      "category": "home",
+      "require_login": true,
+      "volumes": [
+        {
+          "container": "/data",
+          "folder": "data"
+        }
+      ],
+      "uid": 1000,
+      "gid": 1000
+    }
+  ]
 }
